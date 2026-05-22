@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hairhustler</title>
+     <link rel="stylesheet" href="mystyle.css">
+    <link rel="icon" href="images/WhatsApp Image 2026-04-17 at 11.33.49 PM.jpeg">
+</head>
+<body class="skincar">
+    <h4 class="h4">very modern devices are used for skin and hair care </h4>
+
+    <div class="imma">
+        <img src="images/WhatsApp Image 2026-04-18 at 6.15.19 PM (1).jpeg" class="hairkain">
+        <img src="images/WhatsApp Image 2026-04-18 at 6.15.19 PM.jpeg"   class="skin">
+    </div>
+
+    <div class="skinserv">
+        <p1> offer a wide range of skincare services :</p1><br>
+
+        <p2>hair oil treatment </p2><br>
+        <p3>cleansing and moisturizing the skin </p3>
+         
+
+    </div>
+    
+     <label for="toogle" class="titlebox" > click to show our price </label>
+     <input type="checkbox" id="toogle">
+
+     <div class="price-box">
+        <div class="item">
+            <span>skin claning</span>
+            <span>11$</span>
+
+        </div>
+
+        <div class="item">
+            <span>shower oil</span>
+            ,<span>7$</span>
+        </div>
+
+        <div class="item">
+            <span>skin care +shower oil</span>
+            <span>15$</span>
+        </div>
+     </div>
+
+
+     <a href="https://wa.me/message/YGOLOW3GK33BP1" >
+
+        <button class="butt">whatsapp to book</button>
+        
+     </a>
+
+
+<h2 style="text-align:center;">Book Your Appointment</h2>
+
+<div class="booking-container">
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="tel" id="phone" placeholder="Enter your phone number">
+
+<select id="service" onchange="calculatePrice()">
+
+<option value="">Choose Service</option>
+
+<option value="11">Skin Cleaning - 11$</option>
+
+<option value="7">Hair Oil - 7$</option>
+
+<option value="15">Full Care - 15$</option>
+
+</select>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<h2 class="total-price" id="total">
+Total Price: 0$
+</h2>
+
+<button onclick="bookAppointment()" class="book-btn">
+Confirm Booking
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+function calculatePrice(){
+
+const service =
+document.getElementById("service").value;
+
+document.getElementById("total").innerText =
+"Total Price: " + service + "$";
+
+}
+
+function bookAppointment(){
+
+const name =
+document.getElementById("name").value;
+
+const service =
+document.getElementById("service").value;
+
+if(name === "" || service === ""){
+
+alert("Please complete all fields");
+return;
+
+}
+
+document.getElementById("message").innerText =
+"Skincare Appointment Booked ✅";
+
+}
+
+</script>
+
+
+
+
+    
+    
+</body>
+</html>

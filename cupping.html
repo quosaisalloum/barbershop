@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hairhustler</title>
+     <link rel="stylesheet" href="mystyle.css">
+    <link rel="icon" href="images/WhatsApp Image 2026-04-17 at 11.33.49 PM.jpeg">
+</head>
+<body class="cupppag">
+    <h5 class="h5">Mr.abo baker abdullah who holds certificates of expert in cupping therapy , provides cupping services at our clinic</h5>
+    
+
+    <div class="imacupp">
+        <img src="images/WhatsApp Image 2026-04-18 at 6.52.39 PM (1).jpeg">
+        <img src="images/WhatsApp Image 2026-04-18 at 6.52.39 PM.jpeg" >
+    </div>
+
+    <div class="benfcupp">
+        <p1>cupping therapy has many benefits ,such as :</p1><br>
+        <p2>removing the bad blood</p2><br>
+        <p3>reliving muscle spasms</p3><br>
+         <p4>improving sleep quality </p4>
+
+
+    </div>
+
+    
+     <label for="toogle" class="titlebox" > click to show our price </label>
+     <input type="checkbox" id="toogle">
+
+     <div class="price-box">
+        <div class="item">
+            <span>cupping 17</span>
+            <span>20$</span>
+
+        </div>
+
+        <div class="item">
+            <span>cupping 12</span>
+            ,<span>15$</span>
+        </div>
+
+        
+     </div>
+
+     <a href="https://wa.me/message/YGOLOW3GK33BP1" >
+
+        <button class="butt">whatsapp to book</button>
+        
+     </a>
+
+
+  <h2 style="text-align:center;">Book Your Appointment</h2>
+
+<div class="booking-container">
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="tel" id="phone" placeholder="Enter your phone number">
+
+<select id="service" onchange="calculatePrice()">
+
+<option value="">Choose Service</option>
+
+<option value="20">Cupping 17 - 20$</option>
+
+<option value="15">Cupping 12 - 15$</option>
+
+</select>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<h2 class="total-price" id="total">
+Total Price: 0$
+</h2>
+
+<button onclick="bookAppointment()" class="book-btn">
+Confirm Booking
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+function calculatePrice(){
+
+const service =
+document.getElementById("service").value;
+
+document.getElementById("total").innerText =
+"Total Price: " + service + "$";
+
+}
+
+function bookAppointment(){
+
+const name =
+document.getElementById("name").value;
+
+const service =
+document.getElementById("service").value;
+
+if(name === "" || service === ""){
+
+alert("Please complete all fields");
+return;
+
+}
+
+document.getElementById("message").innerText =
+"Cupping Appointment Booked ✅";
+
+}
+
+</script>
+
+
+
+</body>
+</html>

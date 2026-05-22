@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIRCUT HAIRHUSTLER</title>
+     <link rel="stylesheet" href="mystyle.css">
+    <link rel="icon" href="images/WhatsApp Image 2026-04-17 at 11.33.49 PM.jpeg">
+
+</head>
+<body class="haircut">
+    <h3>Here's a brief overview of our barbers and their work</h3>
+
+
+
+    <p class="par2">Samer hassan , he has been working with us for five years has extensive experience , and is innovation we call him "THE creator"</p>
+      
+    <img src="images/WhatsApp Image 2026-04-18 at 5.22.00 PM.jpeg" class="Samer">
+
+
+    <p class="par3" >Ahmad almasri he trained with us from a young age , and together we worked to bring to the world a skilled and accomplished barber</p>
+
+     <label for="toogle" class="titlebox" > click to show our price </label>
+     <input type="checkbox" id="toogle">
+
+     <div class="price-box">
+        <div class="item">
+            <span>hair cut</span>
+            <span>9$</span>
+
+        </div>
+
+        <div class="item">
+            <span>beard trim</span>
+            ,<span>5$</span>
+        </div>
+
+        <div class="item">
+            <span>hair +beard</span>
+            <span>11$</span>
+        </div>
+     </div>
+
+     <a href="https://wa.me/message/YGOLOW3GK33BP1" >
+
+        <button class="butt">whatsapp to book</button>
+        
+     </a>
+
+<h2 style="text-align:center;">Book Your Appointment</h2>
+
+<div class="booking-container">
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="tel" id="phone" placeholder="Enter your phone number">
+
+<select id="service" onchange="calculatePrice()">
+
+<option value="">Choose Service</option>
+
+<option value="9">Hair Cut - 9$</option>
+
+<option value="5">Beard Trim - 5$</option>
+
+<option value="11">Hair + Beard - 11$</option>
+
+</select>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<h2 class="total-price" id="total">
+Total Price: 0$
+</h2>
+
+<button onclick="bookAppointment()" class="book-btn">
+Confirm Booking
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+function calculatePrice(){
+
+const service =
+document.getElementById("service").value;
+
+document.getElementById("total").innerText =
+"Total Price: " + service + "$";
+
+}
+
+function bookAppointment(){
+
+const name =
+document.getElementById("name").value;
+
+const service =
+document.getElementById("service").value;
+
+if(name === "" || service === ""){
+
+alert("Please complete all fields");
+return;
+
+}
+
+document.getElementById("message").innerText =
+"Haircut Appointment Booked ✅";
+
+}
+
+</script>
+
+
+
+    
+</body>
+</html>
