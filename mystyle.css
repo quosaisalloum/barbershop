@@ -378,3 +378,30 @@
     font-weight: bold;
     color: green;
 }
+
+
+@media (max-width: 600px){
+
+    .service {
+        position: relative;
+        height: auto;
+    }
+
+    .hairimage,
+    .massgeimag,
+    .cuppima,
+    .skinima {
+
+        position: static !important;
+
+        display: block;
+        width: 85%;
+        margin: 15px auto;
+    }
+
+    .centerim {
+        position: static !important;
+        width: 85%;
+        margin: 20px auto;
+    }
+}
